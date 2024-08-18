@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  cryptobot:
+    build: .
+    container_name: crypto_notify_bot
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
